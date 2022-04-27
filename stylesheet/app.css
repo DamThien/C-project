@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-A: #383636;
+  --color-B: #ece8e8;
+  --color-C: white;
+  --color-D: crimson;
+  --fw-A: 500;
+  --fz-A: 14px;
+  --fz-logo: 25px;
+  --fz-post-user-name: 13px;
+  --fz-post-time: 11px;
+  --ff-A: "Montserrat", sans-serif;
+  --ff-B: "Libre Bodoni", serif;
+  --border-A: 1px solid var(--color-B);
+  --padding-A: 5px;
+  --padding-B: 10px;
+  --padding-post-header: var(--padding-post);
+  --padding-post: 12px;
+  --padding-cmt-input: var(--padding-A) 20px;
+  --size-icon-A: 27px;
+  --size-post-user-image: 37px;
+  --gtc-post-header: var(--size-post-user-image) 1fr;
+  --gap-post-header: 7px;
+  --gap-post-tool: 15px;
+  --gap-post-bottom: 10px;
+  --gap-post-container: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-size: var(--fz-A);
+  font-family: var(--ff-A);
+  color: var(--color-A);
+  font-weight: var(--fw-A);
+  position: relative;
+}
+
+a {
+  color: var(--color-A);
+}
+
+.title-primary {
+  font-family: var(--ff-B);
+  font-size: var(--fz-logo);
+  font-weight: lighter;
+}
+
+#logo {
+  font-size: var(--fz-logo);
+  font-family: var(--ff-B);
+  font-style: italic;
+  text-transform: lowercase;
+  font-weight: lighter;
+}
+
+#user-image {
+  width: var(--size-icon-A);
+  height: var(--size-icon-A);
+  border-radius: 100%;
+  object-position: center;
+}
+
+.header {
+  width: 100%;
+  padding: var(--padding-A);
+  border-bottom: var(--border-A);
+  background-color: var(--color-C);
+  position: fixed;
+  top: 0;
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  padding: var(--padding-B);
+  border-top: var(--border-A);
+  background-color: var(--color-C);
+  position: fixed;
+  bottom: 0;
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+}
+.footer i {
+  font-size: var(--size-icon-A);
+}
+
+#index {
+  background-color: var(--color-B);
+}
+#index .love-active {
+  color: var(--color-D);
+  font-weight: bolder;
+}
+#index .post-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-post-container);
+}
+#index .post-ele {
+  background-color: var(--color-C);
+}
+#index .post-des {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+#index .post-bottom {
+  padding: var(--padding-post);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-post-bottom);
+}
+#index .post-tool {
+  display: flex;
+  gap: var(--gap-post-tool);
+}
+#index .post-tool i {
+  font-size: var(--size-icon-A);
+}
+#index .post-header {
+  display: grid;
+  grid-template-columns: var(--gtc-post-header);
+  align-items: center;
+  gap: var(--gap-post-header);
+  padding: var(--padding-post-header);
+}
+#index .post-user-image {
+  width: 100%;
+  height: var(--size-post-user-image);
+  border-radius: 100%;
+  overflow: hidden;
+}
+#index .post-user-image img {
+  height: 100%;
+}
+#index .post-info {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#index .post-user-name {
+  font-weight: bold;
+}
+#index .post-time {
+  font-size: var(--fz-post-time);
+}
+#index .cmt-input {
+  padding: var(--padding-cmt-input);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 15px;
+}
+#index .cmt-input .input {
+  width: 100%;
+  height: 45px;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-C);
+}
+#index .cmt-input .input .send-btn {
+  color: #02b7f5;
+}
+#index .cmt-input .input input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: var(--fz-A);
+  font-family: var(--ff-A);
+}
+#index .cmt-user-image {
+  width: var(--size-post-user-image);
+  height: var(--size-post-user-image);
+  border-radius: 100%;
+  overflow: hidden;
+}
+#index .cmt-user-image img {
+  height: 100%;
+}
+#index .cmt-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-B);
+}
+#index .cmt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-A) var(--padding-post);
+  background-color: var(--color-C);
+}
+#index .cmt-header-ele {
+  display: flex;
+  align-items: center;
+}
+#index .cmt-header i {
+  font-size: var(--size-icon-A);
+}
+
+/*# sourceMappingURL=app.css.map */

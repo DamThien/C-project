@@ -1,0 +1,34 @@
+:root{
+  --color-A: #383636;
+  --color-B: #ece8e8;
+  --color-C: white;
+  --color-D: crimson;
+
+  --fw-A: 500;
+
+  --fz-A: 14px;
+  --fz-logo: 25px;
+  --fz-post-user-name: 13px;
+  --fz-post-time: 11px;
+
+  --ff-A: 'Montserrat', sans-serif;
+  --ff-B: 'Libre Bodoni', serif;
+
+  --border-A: 1px solid var(--color-B);
+
+  --padding-A: 5px;
+  --padding-B: 10px;
+  --padding-post-header: var(--padding-post);
+  --padding-post: 12px;
+  --padding-cmt-input: var(--padding-A) 20px;
+
+  --size-icon-A: 27px;
+  --size-post-user-image: 37px;
+
+  --gtc-post-header: var(--size-post-user-image) 1fr;
+
+  --gap-post-header: 7px;
+  --gap-post-tool: 15px;
+  --gap-post-bottom: 10px;
+  --gap-post-container: 30px;
+}
