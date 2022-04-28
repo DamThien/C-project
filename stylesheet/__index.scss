@@ -161,3 +161,43 @@
     }
   }
 }
+
+#si-su{
+
+  & .log-in, & .sign-up{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  & .title{
+    font-size: 30px;
+  }
+
+  & input{
+    width: 250px;
+    height: 30px;
+    border: 1px solid #575757;
+  }
+
+  & .btn-group{
+    display: flex;
+    //width: 100%;
+    gap: 20px;
+  }
+
+  & .btn{
+    //width: 50%;
+    padding: 5px 15px;
+    background-color: var(--color-A);
+    color: var(--color-C);
+  }
+
+}
