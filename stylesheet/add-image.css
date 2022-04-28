@@ -9,10 +9,11 @@ body {
     background: #f8f8f8;
 }
 
-.form {
+
+/* .form {
     margin: 80px 0px 20px;
     padding: 0px 50px;
-}
+} */
 
 .form h2 {
     text-align: center;
@@ -21,18 +22,10 @@ body {
     font-weight: 400;
 }
 
-.form {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
 .form.form-element {
     width: 200px;
     height: 200px;
-    box-shadow: 0px 0px 20px 5px rgba(100, 100, 100, 0.1);
+    /* box-shadow: 0px 0px 20px 5px rgba(100, 100, 100, 0.1); */
 }
 
 .form .form-element input {
@@ -40,8 +33,9 @@ body {
 }
 
 .form .form-element img {
-    max-width: 500px;
+    max-width: 50px;
     object-fit: cover;
+    text-align: center;
 }
 
 .form .form-element div {
@@ -63,33 +57,23 @@ body {
 .container {
     width: 70%;
     margin: auto;
-    text-align: center;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.7fr 2fr 1fr;
     padding: 10px;
-}
-
-.grid a {
-    font-size: 25px;
-    text-decoration: none;
+    text-align: center;
 }
 
 .fomrgroup {
     width: 50%;
-    margin: auto;
-    display: block;
     height: 50px;
 }
 
 .fomrgroup input {
-    float: right;
     width: 70%;
     height: 25px;
-    margin-right: 20px;
-    line-height: 50px;
 }
 
 .fomrgroup b {
@@ -100,7 +84,6 @@ body {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
@@ -112,7 +95,6 @@ body {
 
 .modal-content {
     background-color: #fefefe;
-    margin: auto;
     border: 1px solid #888;
     width: 100%;
 }
@@ -133,4 +115,5 @@ body {
 
 #file-preview img {
     max-width: 400px;
+    max-height: 600px;
 }
