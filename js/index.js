@@ -8,8 +8,16 @@ window.onload = () => {
 }
 function showCmtModel() {
     document.getElementById("comment-checkbox-open").checked = true;
+    $.ajax({
+      url: "http://127.0.0.1:5500/pages/cmtModel.html",
+      success: function (result) {
+        $("main").html(result);
+      },
+    });
 }
 function hideCmtModel() {
     document.getElementById("comment-checkbox-open").checked = false;
-    console.log(2)
+    // console.log(2)
 }
+
+  
