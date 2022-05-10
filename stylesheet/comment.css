@@ -1,0 +1,4 @@
+.comment-checkbox-open:checked~.cmt-container {
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
