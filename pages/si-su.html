@@ -9,6 +9,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheet/app.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <script src="/js/index.js"></script>
 
@@ -25,9 +26,9 @@
                 <div class="title">
                     sign-up
                 </div>
-                <div class="email-label">
-                    <div class="label">email</div>
-                    <input type="text" name="email-su" id="email-su">
+                <div class="user-label">
+                    <div class="label">user</div>
+                    <input type="text" name="user-su" id="user-su">
                 </div>
                 <div class="password-label">
                     <div class="label">password</div>
@@ -41,7 +42,7 @@
                     <div class="btn" onclick="show1()">
                         login
                     </div>
-                    <div class="btn">
+                    <div onclick="signup()" class="btn">
                         go
                     </div>
                 </div>
@@ -52,9 +53,9 @@
         <div id="log-in">
             <div class="log-in">
                 <div class="title">login</div>
-                <div class="email-label">
-                    <div class="label">email</div>
-                    <input type="text" name="email-li" id="email-li">
+                <div class="user-label">
+                    <div class="label">user</div>
+                    <input type="text" name="user-li" id="user-li">
                 </div>
                 <div class="password-label">
                     <div class="label">password</div>
@@ -81,6 +82,34 @@
                 document.getElementById("sign-up").style.display = 'none';
             }
             window.location
+
+            const BASE_API_URL = 'https://localhost:44391/api/'
+
+            function userInfo(nameId, passwordId){
+                let accountName = document.getElementById(nameId)
+                let password = document.getElementById(passwordId)
+
+                return {
+                    accountName: accountName,
+                    password: password
+                }
+            }
+
+            function signup(){
+                let user = userInfo('user-su', 'password-su');
+                axios.post(`${BASE_API_URL}/accounts/sign-up`, user, {
+                    headers: {
+                        accept: 'application/json'
+                    }
+                })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            }
+
         </script>
 
     </main>
